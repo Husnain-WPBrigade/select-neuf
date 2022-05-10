@@ -1,0 +1,150 @@
+.icon-container {
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    width: 22px;
+    height: 22px;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+  }
+
+  &--link {
+    background-color: $color-secondary;
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &--info {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: $color-light-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color-primary;
+      & .icon--info {
+        filter: brightness(31.5);
+      }
+    }
+  }
+
+  &--zoom {
+    width: 70px;
+    height: 70px;
+    background-color: $color-primary;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.icon--collapsible {
+  width: 15px;
+}
+
+.icon--profile {
+  width: 46px;
+  height: 46px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $color-primary;
+  }
+
+  &-secondary {
+    background-color: $color-secondary;
+  }
+}
+
+.icon {
+  width: 15px;
+
+  &--small {
+    width: 11px;
+  }
+
+  &--footer {
+    width: 31px;
+  }
+
+  &--link {
+    width: 8px;
+  }
+
+  &--info {
+    width: 20px;
+  }
+
+  &--zoom {
+    width: 40%;
+  }
+}
+
+.icon--btn {
+  margin-left: 10px;
+}
+
+.icon--star {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.icon--triangle {
+  width: 46px;
+  height: 42px;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  position: relative;
+
+  &-primary {
+    background-color: $color-primary;
+  }
+
+  &-secondary {
+    background-color: $color-secondary;
+  }
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+}
+
+.icon-link a {
+  text-decoration: underline;
+  color: $color-primary;
+  font-weight: 700;
+  margin-right: 15px;
+  transition: all 0.3s;
+
+  &:hover {
+    margin-right: 20px;
+  }
+}

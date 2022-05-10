@@ -1,0 +1,72 @@
+.filter-section {
+  padding: 24px 0;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__form {
+    display: flex;
+    margin-bottom: 11px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__card {
+    width: calc(33.5% - 20px);
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    width: calc(35% - 20px);
+    width: calc(33.5% - 20px);
+    margin-bottom: 25px;
+  }
+
+  // --------------------------- Breakpoints ----------------------------
+  @include mediaManager(1220px) {
+    padding: 24px 15px;
+  }
+
+  @include mediaManager(980px) {
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      width: calc(50% - 15px);
+    }
+  }
+
+  @include mediaManager(850px) {
+    &__form {
+      flex-direction: column;
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+
+  @include mediaManager(680px) {
+    &__card {
+      width: 100%;
+    }
+  }
+
+  @include mediaManager(640px) {
+    display: none;
+  }
+}

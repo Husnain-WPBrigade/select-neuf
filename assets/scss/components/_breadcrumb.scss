@@ -1,0 +1,40 @@
+.breadcrumb {
+  border-top: 1px solid $color-text-light;
+  border-bottom: 1px solid $color-text-light;
+  padding: 21px 0;
+
+  &__list {
+    display: flex;
+
+    cursor: pointer;
+  }
+
+  &__list-item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(../images/next_arrow_icon.svg);
+        width: 15%;
+        height: 52%;
+        background-repeat: no-repeat;
+        top: 52%;
+        right: -20px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__list-item a {
+    color: $color-primary-light;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+
+  &-active a {
+    color: $color-primary;
+  }
+}

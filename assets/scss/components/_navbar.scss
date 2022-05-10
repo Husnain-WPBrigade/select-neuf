@@ -1,0 +1,320 @@
+.nav {
+  background-color: $color-white;
+
+  &__logo {
+    transform: translateY(3px);
+  }
+
+  &__dropdown-btn {
+    display: flex;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    display: none;
+  }
+
+  &__icons-group {
+    display: flex;
+    margin-right: 25px;
+  }
+
+  &__icon {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__dropdown-icon {
+    margin-left: 5px;
+    display: none;
+  }
+
+  &__btn {
+    padding: 10px 30px 9px 29px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-right: 18px;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &-item {
+      position: relative;
+      display: flex;
+      cursor: pointer;
+      padding: 10px 12px;
+
+      &:not(:last-child) {
+        margin-right: 35.5px;
+      }
+    }
+
+    &-item::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      bottom: -27px;
+      height: 2px;
+      left: 0;
+      background-color: $color-secondary;
+      transition: all 0.3s;
+    }
+
+    &-item:hover::after {
+      width: 100%;
+    }
+
+    &-item a {
+      color: $color-primary;
+    }
+
+    @include mediaManager(1150px) {
+      &-item {
+        padding: 5px 10px;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    @include mediaManager(970px) {
+      &-item {
+        padding: 5px;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+
+  // * ------------------------- Desktop - Breakpoints --------------------------
+  @include mediaManager(1210px) {
+    padding: 0 15px;
+  }
+
+  // * ------------------------- Laptop - Breakpoints --------------------------
+  @include mediaManager(900px) {
+    .nav {
+      position: relative;
+      z-index: 9;
+    }
+
+    &__logo {
+      transform: translateY(0px);
+    }
+
+    &__menu-wrapper {
+      display: flex;
+    }
+  }
+
+  // * ------------------------- Mobile - Breakpoints --------------------------
+  @include mediaManager(640px) {
+    padding: 0;
+
+    &__content {
+      padding: 12px 15px 13px 15px;
+    }
+
+    &__logo {
+      width: 35%;
+    }
+  }
+}
+
+// * ------------------------- Dropdown - Styles ----------------------
+
+.dropdown {
+  position: relative;
+
+  &__heading {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__content-wrapper {
+    padding: 20px;
+  }
+
+  &__content {
+    background-color: $color-secondary;
+    min-width: 280px;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    max-height: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+    color: $color-white;
+    z-index: 99;
+
+    &-list {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__list {
+    padding: 10px 20px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__item a {
+    color: $color-white;
+    font-size: 15px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgba($color-white, 0.75);
+    }
+  }
+}
+
+.dropdown:hover .dropdown__content {
+  max-height: 100vh;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@include mediaManager(900px) {
+  .mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    background-color: $color-white;
+  }
+
+  .nav__dropdown-icon {
+    margin-left: 5px;
+    display: flex;
+  }
+
+  .mobile-nav .nav__icons-group {
+    margin-right: 0px;
+  }
+
+  .nav {
+    &__list-wrapper {
+      position: absolute;
+      right: -999px;
+      overflow: hidden;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      transition: all 0.5s;
+      background-color: $color-white;
+    }
+
+    &__list-item::after {
+      display: none;
+    }
+
+    &-item:hover::after {
+      display: none;
+    }
+
+    &__dropdown-btn {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 25px 15px;
+      width: 100%;
+
+      &-item {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+    }
+
+    &__btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+  .nav-active .nav__list-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 29;
+  }
+
+  .dropdown:hover .dropdown__content {
+    max-height: 0;
+    pointer-events: none;
+    pointer-events: unset;
+    transition: all 0.5s;
+  }
+
+  .nav__dropdown-icon {
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+  }
+
+  .dropdown.dropdown.dropdown-active .nav__dropdown-icon {
+    transform: rotate(0);
+  }
+
+  .dropdown.dropdown-active .dropdown__content {
+    max-height: 100vh;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    &__content {
+      width: 100%;
+      position: static;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.popup {
+  width: 100%;
+  position: relative;
+  transition: all 0.5s;
+
+  &__icon {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+
+  &__btn {
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__close-icon {
+    position: absolute;
+    width: 20px;
+    top: 12%;
+    z-index: 21;
+    right: 18%;
+    cursor: pointer;
+    display: none;
+  }
+
+  &__image-modal {
+    display: none;
+  }
+
+  &--active .popup__image-modal {
+    width: 100%;
+    position: fixed;
+    z-index: 990;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color-primary, 0.6);
+  }
+
+  &--active .popup__image {
+    width: 60%;
+  }
+
+  &--active &__close-icon {
+    display: block;
+  }
+}

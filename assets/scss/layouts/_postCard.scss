@@ -1,0 +1,227 @@
+.post-section {
+  padding: 84px 0 42px 0;
+
+  &__content {
+    padding: 10px;
+  }
+
+  &__image-section {
+    width: 100%;
+    display: flex;
+
+    @include mediaManager(950px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__image-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px 15px 0;
+  }
+
+  &__image {
+    width: 50%;
+    transform: translate(-29px, -3px);
+  }
+
+  &__image-content {
+    width: 50%;
+    padding: 0px 1px 1px 9px;
+  }
+
+  &__heading {
+    letter-spacing: 0.9px;
+
+    &-sub {
+      color: $color-secondary;
+    }
+  }
+
+  &__description {
+    margin-bottom: 21px;
+  }
+
+  &__card-section {
+    width: 100%;
+    display: flex;
+
+    @include mediaManager(950px) {
+      flex-direction: column;
+    }
+  }
+
+  &__cards-wrapper {
+    width: 50%;
+    padding: 9px 21px 9px 1px;
+
+    @include mediaManager(950px) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__cards-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 10px;
+
+    @include mediaManager(950px) {
+      width: 100%;
+    }
+
+    &-top {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #2c6da28a;
+      padding: 10px 0 5px 0;
+    }
+
+    &-bottom {
+      padding: 38px 0 20px 0;
+    }
+  }
+
+  &__cards-heading {
+    font-family: "DIN Pro Condensed", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+    position: relative;
+    margin-bottom: 82px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 49px;
+      height: 4px;
+      background-color: $color-primary;
+      left: 26.5%;
+      top: 152%;
+
+      @include mediaManager(950px) {
+        left: 14.5%;
+      }
+
+      @include mediaManager(768px) {
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+
+    &-sub {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__cards-description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    @include mediaManager(768px) {
+      justify-content: center;
+    }
+  }
+
+  // ------------------------- Breakpoints --------------------------
+  @include mediaManager(1220px) {
+    padding: 84px 15px 42px 15px;
+  }
+
+  @include mediaManager(768px) {
+    &__image-section {
+      flex-direction: column;
+    }
+
+    &__image-wrapper {
+      width: 100%;
+    }
+
+    &__image-content {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__cards-content {
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include mediaManager(640px) {
+    padding: 20px 15px;
+
+    &__content {
+      padding: 0;
+    }
+
+    &__image-section {
+      margin-bottom: 7px;
+    }
+
+    &__image-wrapper {
+      padding: 10px;
+      margin-bottom: 2px;
+    }
+
+    &__image {
+      width: 45%;
+      transform: translate(0);
+    }
+
+    &__image-content {
+      padding: 0;
+    }
+
+    &__heading {
+      font-size: 28px;
+      margin-bottom: 0;
+
+      &-sub {
+        display: none;
+      }
+    }
+
+    &__description {
+      display: none;
+    }
+
+    &__cards-wrapper {
+      margin-bottom: 56px;
+    }
+
+    &__cards-content {
+      padding: 0;
+    }
+
+    &__cards-heading {
+      font-size: 28px;
+
+      &::after {
+        top: 115%;
+      }
+    }
+
+    &__link a {
+      font-size: 14px;
+      text-align: left;
+      margin: 0;
+      width: 90%;
+    }
+  }
+}
+
+.post-card--link {
+  &:not(:first-child) {
+    @include mediaManager(640px) {
+      display: none;
+    }
+  }
+}

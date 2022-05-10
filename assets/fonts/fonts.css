@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro Light Italic 300.woff2") format("woff2"),
+    url("DIN Pro Light Italic 300.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro Light 300.woff2") format("woff2"),
+    url("DIN Pro Light 300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro 400.woff2") format("woff2"),
+    url("DIN Pro 400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro Italic 400.woff2") format("woff2"),
+    url("DIN Pro Italic 400.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro Medium 500.woff2") format("woff2"),
+    url("DIN Pro Medium 500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro Medium Italic 500.woff2") format("woff2"),
+    url("DIN Pro Medium Italic 500.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro Bold 700.woff2") format("woff2"),
+    url("DIN Pro Bold 700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Pro";
+  src: url("DIN Pro Bold Italic 700.woff2") format("woff2"),
+    url("DIN Pro Bold Italic 700.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Condensed Fonts */
+
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("DIN Pro Condensed Light 300.woff2") format("woff2"),
+    url("DIN Pro Condensed Light 300.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("DIN Pro Condensed Medium 500.woff2") format("woff2"),
+    url("DIN Pro Condensed Medium 500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("DIN Pro Condensed Medium Italic 500.woff2") format("woff2"),
+    url("DIN Pro Condensed Medium Italic 500.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("DIN Pro Condensed Italic 400.woff2") format("woff2"),
+    url("DIN Pro Condensed Italic 400.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "DIN Pro Condensed";
+  src: url("DIN Pro Condensed Bold Italic 700.woff2") format("woff2"),
+    url("DIN Pro Condensed Bold Italic 700.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: condensed;
+}

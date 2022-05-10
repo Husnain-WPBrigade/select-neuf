@@ -1,0 +1,75 @@
+.table-section {
+  @include mediaManager(1220px) {
+    padding: 0 15px;
+  }
+
+  @include mediaManager(640px) {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include mediaManager(960px) {
+      flex-direction: column;
+    }
+  }
+
+  &__main {
+    width: 61.4%;
+
+    @include mediaManager(960px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn-wrapper {
+    background-color: $color-light-grey;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 29px 20px;
+    margin-bottom: 49px;
+    margin-top: 9px;
+  }
+
+  &__heading {
+    margin-bottom: 32px;
+
+    &-overlay {
+      font-family: "DIN Pro Condensed";
+      font-weight: 700;
+      font-style: italic;
+      font-size: 38px;
+      color: $color-white;
+      text-align: center;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__aside {
+    width: 33.3%;
+    @include mediaManager(960px) {
+      width: 100%;
+    }
+  }
+
+  &__overlay-content {
+    padding: 40px 8px 10px 10px;
+  }
+
+  &__text {
+    margin-left: 5px;
+  }
+
+  &__overlay-text {
+    padding: 8px 22px 4px 22px;
+    letter-spacing: 0.5px;
+    font-size: 24px;
+    font-family: "DIN Pro Condensed";
+    font-style: italic;
+  }
+}

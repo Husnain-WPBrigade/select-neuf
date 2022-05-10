@@ -1,0 +1,102 @@
+.contact {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color-primary, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s;
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__wrapper {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    padding: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/multy_corner.svg");
+      width: 57%;
+      height: 35%;
+      background-repeat: no-repeat;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    z-index: 3;
+  }
+
+  &__form-close {
+    position: absolute;
+    top: 0;
+    right: -5%;
+    top: -5%;
+    background-repeat: no-repeat;
+    width: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: translateY(2px);
+      filter: drop-shadow(1px 1px 9px rgba(0, 0, 0, 0.527));
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  &__form-btn {
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+
+  &__text-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__heading {
+    font-family: "DIN Pro Condensed";
+    font-style: italic;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  &__description {
+    font-family: "DIN Pro Condensed";
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 500;
+    color: $color-primary-light;
+
+    &-bottom {
+      color: $color-primary-light;
+      text-align: center;
+    }
+  }
+}

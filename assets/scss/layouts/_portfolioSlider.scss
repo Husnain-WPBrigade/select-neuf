@@ -1,0 +1,89 @@
+.portfolio-section {
+  padding: 87px 0;
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    align-self: center;
+    padding: 9.2px 30px;
+  }
+
+  // --------------------  Breakpoints -----------------------
+  @include mediaManager(1260px) {
+    &__content {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+  @include mediaManager(700px) {
+    &__btn {
+      padding: 9.2px 12px;
+    }
+  }
+
+  @include mediaManager(640px) {
+    padding: 30px 0;
+
+    &__heading {
+      margin-bottom: 27px;
+      padding: 0 12px;
+      font-size: 28px;
+    }
+  }
+}
+
+.portfolio-slider {
+  position: relative;
+  margin-bottom: 61px;
+  @include mediaManager(640px) {
+    margin-bottom: 23px;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__next {
+    top: 42%;
+    right: -35px;
+    transform: translateY(-50%);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__prev {
+    top: 42%;
+    transform: translateY(-50%);
+    left: -35px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  // --------------------  Breakpoints -----------------------
+  @include mediaManager(640px) {
+    margin-bottom: 23px;
+
+    &__next {
+      right: -15px;
+      top: 38%;
+    }
+
+    &__prev {
+      left: -15px;
+      top: 38%;
+    }
+  }
+}

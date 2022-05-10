@@ -1,0 +1,98 @@
+.features-section {
+  padding: 78px 0 25px 0;
+
+  &__heading {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  // --------------- Breakpoints -----------------------------
+  @include mediaManager(1200px) {
+    &__content {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  @include mediaManager(640px) {
+    padding: 22px 0 22px 0;
+    border-bottom: 2px solid lighten($color-primary-light, 20%);
+
+    &__heading {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.feature-cards-wrapper {
+  display: flex;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+}
+
+.feature-cards-section {
+  &__heading {
+    text-align: center;
+    font-family: "DIN Pro Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 64px;
+  }
+}
+
+.feature-slider {
+  position: relative;
+  margin: 0 -3px 0 3px;
+  margin-bottom: 61px;
+
+  @include mediaManager(900px) {
+    margin-bottom: 0;
+  }
+
+  @include mediaManager(640px) {
+    margin-bottom: 0;
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__next {
+    top: 43.2%;
+    right: -35px;
+    transform: translateY(-50%);
+    display: none;
+    @include mediaManager(640px) {
+      display: block;
+      right: -5px;
+      top: 32%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__prev {
+    top: 43.2%;
+    transform: translateY(-50%);
+    left: -35px;
+    display: none;
+
+    @include mediaManager(640px) {
+      display: block;
+      left: 0px;
+      top: 32%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

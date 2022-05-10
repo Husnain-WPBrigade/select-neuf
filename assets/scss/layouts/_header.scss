@@ -1,0 +1,236 @@
+.hero {
+  position: relative;
+
+  &__bg-wrapper {
+    width: 100%;
+    display: flex;
+    background-color: $color-primary;
+    min-height: 790px;
+
+    @include mediaManager(640px) {
+      min-height: 465px;
+    }
+  }
+
+  &__corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 5.4%;
+    @include mediaManager(830px) {
+      width: 7.4%;
+    }
+  }
+
+  &__image-wrapper {
+    width: 61.5%;
+    background-color: $color-secondary;
+    clip-path: polygon(0 0, 100% 0%, 61.3% 100%, 0% 100%);
+
+    @include mediaManager(640px) {
+      width: 40%;
+      clip-path: polygon(0 0, 100% 0%, -50% 100%, 0% 100%);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__bg {
+    width: 36.5%;
+    background-color: $color-primary;
+
+    @include mediaManager(640px) {
+      width: 60%;
+    }
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 26.96%;
+
+    @include mediaManager(830px) {
+      top: 20%;
+      padding: 0 15px;
+    }
+    @include mediaManager(640px) {
+      top: 7%;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-wrapper {
+    margin-bottom: 61px;
+    @include mediaManager(640px) {
+      padding: 0 25px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 8px;
+
+    @include mediaManager(640px) {
+      font-size: 28px;
+      margin-bottom: 5px;
+      text-shadow: 0.5px 0.5px 2px rgba(43, 40, 40, 0.49);
+    }
+
+    &-sub {
+      margin-bottom: 6px;
+      opacity: 0.8;
+
+      @include mediaManager(700px) {
+        font-size: 36px;
+      }
+
+      @include mediaManager(640px) {
+        font-size: 20px;
+        margin-bottom: 11px;
+      }
+    }
+  }
+
+  &__tagline {
+    letter-spacing: 0.4px;
+
+    @include mediaManager(640px) {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 0 16px 0 13px;
+
+    & .input-group {
+      width: 25%;
+      @include mediaManager(830px) {
+        width: 100%;
+      }
+    }
+
+    @include mediaManager(830px) {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    padding: 12px 92px 12px 93px;
+    font-size: 16px;
+    width: 25%;
+
+    @include mediaManager(830px) {
+      width: 100%;
+    }
+
+    @include mediaManager(900px) {
+      padding: 12px 50px;
+    }
+
+    @include mediaManager(640px) {
+      padding: 8px 50px;
+    }
+  }
+
+  &__secondary-text {
+    color: $color-white;
+    align-self: flex-end;
+    position: absolute;
+    z-index: 7;
+    right: 12%;
+    bottom: 11%;
+
+    @include mediaManager(700px) {
+      left: 15px;
+    }
+
+    @include mediaManager(640px) {
+      bottom: 8.5%;
+    }
+  }
+
+  &__arrow-text {
+    font-size: 48px;
+    font-weight: 500;
+    position: relative;
+
+    @include mediaManager(700px) {
+      font-size: 36px;
+    }
+
+    @include mediaManager(640px) {
+      font-size: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/dropdown_white_icon.svg");
+      left: 50%;
+      top: 128%;
+      width: 15%;
+      height: 20%;
+      background-repeat: no-repeat;
+
+      @include mediaManager(640px) {
+        width: 23%;
+        height: 45%;
+        right: 0;
+        top: 20%;
+
+        left: 114%;
+      }
+    }
+  }
+
+  &__arrow-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 34px;
+
+    @include mediaManager(700px) {
+      padding-left: 0;
+    }
+  }
+}
+
+.hero__form .input-group {
+  border-radius: 0;
+  padding: 6px 17px;
+
+  @include mediaManager(640px) {
+    padding: 3px 17px;
+  }
+}
+
+.hero__form .input-group:nth-child(1) {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.hero__form .input-group:not(:last-child) {
+  @include mediaManager(830px) {
+    margin-bottom: 15px;
+  }
+
+  @include mediaManager(640px) {
+    margin-bottom: 14px;
+  }
+}

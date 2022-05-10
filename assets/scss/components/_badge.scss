@@ -1,0 +1,21 @@
+.badge {
+  width: 108px;
+  height: 108px;
+  border-radius: 100%;
+  background-color: $color-primary-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+
+  &__text {
+    font-family: "DIN Pro Condensed";
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-white;
+    font-style: italic;
+    letter-spacing: 0.9px;
+    line-height: 1.05;
+  }
+}

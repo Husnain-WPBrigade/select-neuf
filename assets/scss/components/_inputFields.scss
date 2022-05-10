@@ -1,0 +1,85 @@
+.input-group {
+  padding: 0px 12px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &--primary {
+    background-color: $color-white;
+  }
+
+  &--secondary {
+    background-color: $color-light-grey;
+    border: 1px solid #ebebeb;
+    padding: 10px 10px 10px 19px;
+  }
+}
+
+.input-icon {
+  margin-right: 8px;
+  display: flex;
+}
+
+.input {
+  padding: 10px 10px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  background-origin: content-box;
+
+  &::placeholder {
+    color: $color-primary;
+    font-family: "Roboto";
+  }
+
+  &--footer {
+    padding: 13px 3px;
+  }
+
+  &--dropdown {
+    color: $color-primary-light;
+  }
+
+  &--stretched {
+    background-color: $color-light-grey;
+    padding: 0px;
+    width: 100%;
+    border: 1px solid $color-text-light;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    & .input::placeholder {
+      color: $color-primary-light;
+      font-size: 16px;
+    }
+  }
+
+  &--contact {
+    background-color: $color-light-grey;
+    padding: 0px;
+    width: calc(50% - 10px);
+    border: 1px solid $color-text-light;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    & .input::placeholder {
+      color: $color-primary-light;
+      font-size: 16px;
+    }
+  }
+}
+
+select {
+  appearance: none;
+  background-image: url("../images/dropdown_icon.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: right;
+}

@@ -1,0 +1,49 @@
+.location-box {
+  font-family: "DIN Pro";
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5px;
+  border-bottom: 2px solid #f0f0f0;
+  letter-spacing: 1.5px;
+  width: calc(50% - 15px);
+  @include mediaManager(768px) {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  &:nth-of-type(odd) {
+    margin-right: 30px;
+  }
+
+  &__heading {
+    font-weight: 300;
+    font-style: normal;
+    color: $color-primary-light;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 5px;
+  }
+}
+
+.location-table {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    word-wrap: break-word;
+
+    @include mediaManager(768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    font-family: "DIN Pro", sans-serif;
+    margin-bottom: 10px;
+  }
+}

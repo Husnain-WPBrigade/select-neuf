@@ -1,0 +1,62 @@
+.map-section {
+  padding: 53px 0;
+
+  @include mediaManager(1220px) {
+    padding: 53px 15px;
+  }
+
+  @include mediaManager(640px) {
+    display: none;
+  }
+  &__content-wrapper {
+    width: 70%;
+
+    @include mediaManager(960px) {
+      width: 100%;
+    }
+  }
+
+  &__table {
+    margin-bottom: 50px;
+  }
+  &__heading {
+    margin-bottom: 25px;
+    letter-spacing: 0.2px;
+
+    &-sub {
+      font-family: "DIN Pro Condensed";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: 0.1px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__map-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: -6px;
+  }
+}
+
+.google-map {
+  position: relative;
+
+  &__indicators {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+
+    &-bar {
+      width: 60%;
+    }
+  }
+}

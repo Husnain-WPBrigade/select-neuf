@@ -1,0 +1,74 @@
+.description-section {
+  padding: 33px 0 4px 0;
+
+  &__heading {
+    margin-bottom: 28px;
+
+    &-sub {
+      font-family: "DIN Pro Condensed";
+      font-weight: 500;
+      font-size: 24px;
+      font-style: italic;
+    }
+  }
+
+  &__paragraph {
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &-box-1 {
+      width: 61.4%;
+    }
+
+    &-box-2 {
+      width: 33.3%;
+
+      & .description-section__heading {
+        margin-bottom: 25px;
+
+        @include mediaManager(860px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  //  --------------------- Breakpoints -----------------------------
+  @include mediaManager(1220px) {
+    padding: 33px 15px 4px 15px;
+  }
+
+  @include mediaManager(860px) {
+    padding: 40px 15px 40px 15px;
+
+    &__heading {
+      margin-bottom: 10px;
+    }
+
+    &__content {
+      flex-direction: column;
+
+      &-box-1 {
+        width: 100%;
+        margin-bottom: 50px;
+      }
+
+      &-box-2 {
+        width: 100%;
+      }
+    }
+  }
+
+  @include mediaManager(640px) {
+    display: none;
+  }
+}

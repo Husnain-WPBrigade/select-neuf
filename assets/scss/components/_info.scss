@@ -1,0 +1,43 @@
+.info {
+  &__icon-bar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text-wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__badge-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+  }
+
+  &__badge-text {
+    font-family: "DIN Pro Condensed";
+    font-size: 48px;
+  }
+
+  &__overlay {
+    letter-spacing: 0.6px;
+    align-self: flex-start;
+  }
+}

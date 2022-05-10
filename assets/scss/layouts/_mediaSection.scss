@@ -1,0 +1,173 @@
+.media-section {
+  padding: 29px 0;
+
+  &__image-wrapper {
+    background-color: $color-primary;
+    position: relative;
+    object-fit: cover;
+    justify-self: end;
+    display: flex;
+    clip-path: polygon(0 0, 100% 0%, 75.4% 100%, 0% 100%);
+
+    & img {
+      width: auto;
+    }
+  }
+
+  &__overlay-text {
+    align-self: flex-start;
+    margin-bottom: 7px;
+  }
+
+  &__image-content {
+    position: absolute;
+    padding: 80px 40px 20px 0;
+    z-index: 2;
+    margin-left: -29px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__features {
+    color: $color-white;
+  }
+
+  &__feature {
+    text-shadow: 0.2px 0.5px 2px $color-primary-light;
+    letter-spacing: 0.45px;
+    @include mediaManager(1085px) {
+      font-size: 20px;
+    }
+  }
+
+  &__feature:not(:first-child) {
+    @include mediaManager(640px) {
+      display: none;
+    }
+  }
+
+  &__feature:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__heading {
+    margin-bottom: 23px;
+  }
+
+  &__content {
+    background-color: $color-white;
+    padding: 39px 0 4px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -11px;
+  }
+
+  &__card:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  //  -------------------------- Breakpoints -----------------------
+  @include mediaManager(1260px) {
+    &__content {
+      padding: 20px 15px 4px 0px;
+    }
+    &__image-content {
+      margin: 0;
+      padding: 80px 40px 20px 15px;
+    }
+  }
+
+  @include mediaManager(970px) {
+    &__content {
+      padding: 20px 15px 4px 15px;
+      flex-direction: row;
+    }
+    &__image-wrapper {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    &__card {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__card:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mediaManager(768px) {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__card:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @include mediaManager(640px) {
+    padding: 2px 0;
+
+    &__image-wrapper {
+      clip-path: polygon(0 0, 100% -115%, 48% 100%, 0% 100%);
+    }
+
+    &__overlay-text {
+      align-self: auto;
+      font-size: 20px;
+      padding: 2px 14px;
+      margin-bottom: 10px;
+    }
+
+    &__image-content {
+      padding: 40px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    &__heading {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    &__feature {
+      color: $color-primary-light;
+      text-shadow: none;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    &__content {
+      margin-top: 0;
+      padding: 0;
+      margin-top: -41px;
+    }
+
+    &__card {
+      margin-bottom: 75px;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+
+  &-1x2 {
+    grid-template-columns: 61.6% 38.4%;
+
+    @include mediaManager(970px) {
+      grid-template-columns: 100%;
+    }
+
+    @include mediaManager(640px) {
+      grid-template-rows: 294px 1fr;
+      padding: 0 15px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.timeline-section {
+  padding: 67px 0;
+  margin-top: 50px;
+
+  @include mediaManager(800px) {
+    display: none;
+  }
+
+  @include mediaManager(1220px) {
+    padding: 67px 15px;
+  }
+  &__heading {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    width: 25.6%;
+    margin: auto;
+
+    @include mediaManager(1160px) {
+      width: 35%;
+    }
+
+    @include mediaManager(900px) {
+      width: 45%;
+    }
+  }
+}
+.timeline {
+  height: 460px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 47px;
+
+  &__bar {
+    height: 1px;
+    width: 100%;
+    background-color: $color-text-light;
+    position: relative;
+  }
+}
+
+.timeline-card-wrapper {
+  max-width: 250px;
+  position: absolute;
+  bottom: 0;
+  margin-right: 20px;
+
+  &:nth-of-type(even) .timeline-card {
+    flex-direction: column-reverse;
+    padding: 45px 10px 10px 10px;
+  }
+
+  &:nth-of-type(even) .timeline-card::after {
+    top: -5px;
+  }
+
+  &:nth-child(2n) {
+    top: 0;
+    left: 20%;
+
+    @include mediaManager(1080px) {
+      left: 24%;
+    }
+  }
+
+  &:nth-child(3) {
+    left: 40%;
+
+    @include mediaManager(1080px) {
+      left: 48%;
+    }
+  }
+
+  &:nth-child(4) {
+    left: 60%;
+    @include mediaManager(1080px) {
+      left: 74%;
+    }
+  }
+
+  &:nth-child(5) {
+    left: 80%;
+
+    @include mediaManager(1080px) {
+      display: none;
+    }
+  }
+
+  &:nth-child(6) {
+    left: 125%;
+  }
+
+  &:nth-child(2n) .timeline-card__heading {
+    top: -43%;
+    bottom: 0;
+  }
+
+  &:nth-of-type(even) .timeline-card__image {
+    margin-bottom: 20px;
+  }
+}
+
+.timeline-card {
+  padding: 5px 5px 15px 5px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    bottom: -5px;
+  }
+
+  &__heading {
+    color: $color-text-light;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -60%;
+
+    &-sub {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    color: $color-primary-light;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    width: 70px;
+  }
+}

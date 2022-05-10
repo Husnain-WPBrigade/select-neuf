@@ -1,0 +1,27 @@
+.utility {
+  padding: 5px 15px;
+  background-color: $color-white;
+  @include mediaManager(640px) {
+    display: none;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__text {
+    color: $color-primary-light;
+  }
+
+  &__media-group {
+    display: flex;
+  }
+}
+
+.utility .media-inline__text {
+  font-size: 14px;
+}
+
+.utility .media-inline:not(:last-child) {
+  margin-right: 30px;
+}
