@@ -63,6 +63,10 @@
     width: 100%;
   }
 
+  &__card {
+    display: flex;
+  }
+
   &__next {
     top: 43.2%;
     right: -35px;
@@ -95,4 +99,10 @@
       display: none;
     }
   }
+}
+
+.feature-slider__item.swiper-slide {
+  display: flex;
+  flex-direction: row;
+  height: auto;
 }

@@ -2760,6 +2760,12 @@ select {
   width: 100%;
 }
 
+.feature-slider__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .feature-slider__next {
   top: 43.2%;
   right: -35px;
@@ -2798,6 +2804,17 @@ select {
 
 .feature-slider__prev::after {
   display: none;
+}
+
+.feature-slider__item.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: auto;
 }
 
 .cta-section {
