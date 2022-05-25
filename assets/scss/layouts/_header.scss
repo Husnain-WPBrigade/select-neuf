@@ -1,14 +1,54 @@
-.hero {
-  position: relative;
+.section-hero {
+  height: 790px;
+  background-color: $color-primary;
 
-  &__bg-wrapper {
-    width: 100%;
-    display: flex;
-    background-color: $color-primary;
-    min-height: 790px;
+  @include mediaManager(900px) {
+    height: 650px;
+  }
+
+  @include mediaManager(640px) {
+    height: 590px;
+  }
+}
+.hero {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    background-image: url("../images/red-corner.svg");
+    position: absolute;
+    width: 90px;
+    height: 37%;
+    background-repeat: no-repeat;
+    z-index: 99;
+    top: 0;
+    left: 0;
 
     @include mediaManager(640px) {
-      min-height: 465px;
+      height: 590px;
+      transform: scale(0.5);
+      transform-origin: 0px 0px;
+    }
+  }
+
+  &__img-box {
+    background-image: url("../images/hero-banner.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 63%;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0%, 65% 100%, 0% 100%);
+    position: absolute;
+    z-index: -1;
+
+    @include mediaManager(640px) {
+      clip-path: polygon(0 0, 100% 0%, -25% 100%, 0% 100%);
+      // width: 50%;
     }
   }
 
@@ -23,80 +63,65 @@
     }
   }
 
-  &__image-wrapper {
-    width: 61.5%;
-    background-color: $color-secondary;
-    clip-path: polygon(0 0, 100% 0%, 61.3% 100%, 0% 100%);
-
-    @include mediaManager(640px) {
-      width: 40%;
-      clip-path: polygon(0 0, 100% 0%, -50% 100%, 0% 100%);
-    }
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__bg {
-    width: 36.5%;
-    background-color: $color-primary;
-
-    @include mediaManager(640px) {
-      width: 60%;
-    }
-  }
-
   &__content-wrapper {
-    position: absolute;
-    width: 100%;
-    top: 26.96%;
+    z-index: 3;
+    color: #ffff;
+    height: 100%;
+    display: flex;
+    align-items: center;
 
-    @include mediaManager(830px) {
-      top: 20%;
-      padding: 0 15px;
-    }
-    @include mediaManager(640px) {
-      top: 7%;
+    @include mediaManager(900px) {
+      // align-items: flex-start;
     }
   }
 
   &__content {
     text-align: center;
-    color: $color-white;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+
+    @include mediaManager(900px) {
+      // margin-top: 60px;
+    }
   }
 
   &__text-wrapper {
     margin-bottom: 61px;
-    @include mediaManager(640px) {
-      padding: 0 25px;
-      margin-bottom: 20px;
+    @include mediaManager(900px) {
+      margin-bottom: 30px;
     }
   }
 
   &__heading {
     margin-bottom: 8px;
 
+    @include mediaManager(768px) {
+      font-size: 40px;
+    }
+
     @include mediaManager(640px) {
-      font-size: 28px;
+      font-size: 36px;
       margin-bottom: 5px;
       text-shadow: 0.5px 0.5px 2px rgba(43, 40, 40, 0.49);
+    }
+
+    @include mediaManager(440px) {
+      font-size: 24px;
     }
 
     &-sub {
       margin-bottom: 6px;
       opacity: 0.8;
 
-      @include mediaManager(700px) {
-        font-size: 36px;
+      @include mediaManager(768px) {
+        font-size: 40px;
       }
 
       @include mediaManager(640px) {
-        font-size: 20px;
+        font-size: 36px;
+      }
+
+      @include mediaManager(440px) {
+        font-size: 24px;
         margin-bottom: 11px;
       }
     }
@@ -115,8 +140,6 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    padding: 0 16px 0 13px;
-
     & .input-group {
       width: 25%;
       @include mediaManager(830px) {
@@ -132,37 +155,27 @@
   }
 
   &__btn {
-    padding: 12px 92px 12px 93px;
+    padding: 14px 15px 14px 15px;
     font-size: 16px;
     width: 25%;
 
     @include mediaManager(830px) {
       width: 100%;
     }
-
-    @include mediaManager(900px) {
-      padding: 12px 50px;
-    }
-
-    @include mediaManager(640px) {
-      padding: 8px 50px;
-    }
   }
 
   &__secondary-text {
-    color: $color-white;
-    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    z-index: 7;
-    right: 12%;
-    bottom: 11%;
+    right: -15px;
+    top: 150%;
 
-    @include mediaManager(700px) {
-      left: 15px;
-    }
-
-    @include mediaManager(640px) {
-      bottom: 8.5%;
+    @include mediaManager(830px) {
+      right: 0;
+      left: 0;
+      top: 105%;
     }
   }
 
@@ -170,13 +183,18 @@
     font-size: 48px;
     font-weight: 500;
     position: relative;
+    margin-right: 20px;
 
-    @include mediaManager(700px) {
-      font-size: 36px;
+    @include mediaManager(830px) {
+      font-size: 40px;
     }
 
     @include mediaManager(640px) {
-      font-size: 20px;
+      font-size: 36px;
+    }
+
+    @include mediaManager(440px) {
+      font-size: 24px;
     }
 
     &::after {
@@ -184,9 +202,10 @@
       position: absolute;
       background-image: url("../images/dropdown_white_icon.svg");
       left: 50%;
-      top: 128%;
-      width: 15%;
-      height: 20%;
+      transform: translateX(-50%);
+      bottom: -20px;
+      width: 18px;
+      height: 12px;
       background-repeat: no-repeat;
 
       @include mediaManager(640px) {
@@ -202,21 +221,10 @@
 
   &__arrow-text-wrapper {
     display: flex;
-    justify-content: space-between;
-    padding-left: 34px;
 
-    @include mediaManager(700px) {
-      padding-left: 0;
+    @include mediaManager(900px) {
+      display: none;
     }
-  }
-}
-
-.hero__form .input-group {
-  border-radius: 0;
-  padding: 6px 17px;
-
-  @include mediaManager(640px) {
-    padding: 3px 17px;
   }
 }
 
@@ -232,5 +240,18 @@
 
   @include mediaManager(640px) {
     margin-bottom: 14px;
+  }
+}
+
+.hero .container {
+  width: 100%;
+}
+
+.hero .input-group {
+  width: 25%;
+  padding: 0px 10px 0px 0px;
+  @include mediaManager(830px) {
+    padding: 8px;
+    width: 100%;
   }
 }

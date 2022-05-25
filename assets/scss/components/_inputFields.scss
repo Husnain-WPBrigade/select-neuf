@@ -17,12 +17,17 @@
 }
 
 .input-icon {
-  margin-right: 8px;
   display: flex;
+  height: 100%;
+}
+
+.input-icon img {
+  padding: 8px;
+  cursor: pointer;
 }
 
 .input {
-  padding: 10px 10px;
+  padding: 8px;
   font-size: 16px;
   outline: none;
   width: 100%;

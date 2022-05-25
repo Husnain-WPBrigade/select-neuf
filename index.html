@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Select Neuf | Home Page</title>
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -113,7 +117,7 @@
               <ul class="nav__list">
                 <li class="nav__list-item dropdown">
                   <div class="nav__dropdown-btn">
-                    <a >ACHETER</a>
+                    <a>ACHETER</a>
                     <img
                       class="nav__dropdown-icon icon"
                       src="assets/images/dropdown_icon.svg"
@@ -152,12 +156,18 @@
                     </div>
                   </div>
                 </li>
-                <li class="nav__list-item"><a href="invest-page.html">INVESTIR</a></li>
+                <li class="nav__list-item">
+                  <a href="invest-page.html">INVESTIR</a>
+                </li>
                 <li class="nav__list-item"><a href="#">S’INFORMER</a></li>
                 <li class="nav__list-item"><a href="#">SIMULER</a></li>
-                <li class="nav__list-item"><a href="contact.html">CONTACT</a></li>
+                <li class="nav__list-item">
+                  <a href="contact.html">CONTACT</a>
+                </li>
               </ul>
-              <div class="nav__btn-wrapper"><a href="#" class="btn btn--primary nav__btn">NOUS REJOINDRE</a></div>
+              <div class="nav__btn-wrapper">
+                <a href="#" class="btn btn--primary nav__btn">NOUS REJOINDRE</a>
+              </div>
             </div>
           </div>
         </div>
@@ -167,28 +177,10 @@
     <!-- *----------------------------------------- 
       *-----------------------------------------------  HERO--SECTION ------------------------------------
    *------------------------------------------------------------------>
-    <section class="hero-section">
+
+    <section class="section-hero">
       <div class="hero">
-        <img class="hero__corner" src="assets/images/red-corner.svg" alt="" />
-        <div class="hero__secondary-text">
-          <h2 class="hero__heading-sub heading--block-reg">
-            JE SOUHAITE ACHETER UN LOGEMENT NEUF
-          </h2>
-          <div class="hero__arrow-text-wrapper heading--block-med">
-            <h3 class="hero__arrow-text">POUR Y VIVRE</h3>
-            <h3 class="hero__arrow-text">POUR LE LOUER</h3>
-          </div>
-        </div>
-        <div class="hero__bg-wrapper">
-          <div class="hero__image-wrapper">
-            <img
-              class="hero__image"
-              src="assets/images/hero-banner.jpg"
-              alt=""
-            />
-          </div>
-          <div class="hero__bg"></div>
-        </div>
+        <div class="hero__img-box"></div>
 
         <div class="hero__content-wrapper">
           <div class="container">
@@ -205,9 +197,9 @@
 
               <form class="hero__form">
                 <div class="input-group input-group--primary">
-                  <div class="input-icon">
+                  <label class="input-icon">
                     <img src="assets/images/key_chain_icon.svg" alt="" />
-                  </div>
+                  </label>
                   <select
                     class="input input--dropdown"
                     name="Type de bien"
@@ -218,12 +210,20 @@
                     <option value="Type de bien">Type de bien</option>
                   </select>
                 </div>
+
                 <div class="input-group input-group--primary">
-                  <div class="input-icon">
+                  <label class="input-icon" for="ville-cp">
                     <img src="assets/images/key_chain_icon.svg" alt="" />
-                  </div>
-                  <input class="input" type="text" placeholder="Ville / CP" />
+                  </label>
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Ville / CP"
+                    id="ville-cp"
+                    name="ville-cp"
+                  />
                 </div>
+
                 <div class="input-group input-group--secondary">
                   <div class="input-icon">
                     <img src="assets/images/key_chain_icon.svg" alt="" />
@@ -236,26 +236,30 @@
                     placeholder="Ville / CP"
                   />
                 </div>
+
                 <input
                   type="button"
                   value="RECHERCHER"
                   class="btn btn--secondary btn--stretched hero__btn"
                 />
               </form>
+
+              <div class="hero__secondary-text">
+                <h2 class="hero__heading-sub heading--block-reg">
+                  JE SOUHAITE ACHETER UN LOGEMENT NEUF
+                </h2>
+                <div class="hero__arrow-text-wrapper heading--block-med">
+                  <h3 class="hero__arrow-text">POUR Y VIVRE</h3>
+                  <h3 class="hero__arrow-text">POUR LE LOUER</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-       <!-- *-----------------------------------------
-        *-----------------------------------------------  MAIN - BODY ------------------------------------
-         *------------------------------------------------------------------>
-
-    <main class="main-body">
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  PORTFOLIO__CARD--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+    <!-- <main class="main-body">
       <section class="portfolio-section">
         <div class="container">
           <div class="portfolio-section__content">
@@ -439,9 +443,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  FEATURES__CARD--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="features-section">
         <div class="container">
           <div class="features-section__content">
@@ -557,9 +559,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *----------------------------------------------- CTA--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="cta-section">
         <div class="container">
           <div class="cta-section__wrapper">
@@ -612,9 +612,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  MEDIA__CARD - SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="media-section">
         <div class="container">
           <div class="media-section__image-content">
@@ -712,9 +710,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  GALLERY--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+ 
       <section class="gallery-section">
         <div class="container">
           <div class="gallery-section__content">
@@ -851,9 +847,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  DESCRIPTION--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="description-section">
         <div class="container">
           <div class="description-section__content">
@@ -887,9 +881,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  TABLE--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="table-section">
         <div class="container">
           <div class="table-section__content">
@@ -1045,9 +1037,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  MAP__TABLE--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="map-table-section">
         <div class="map-section">
           <div class="container">
@@ -1108,9 +1098,7 @@
           </div>
         </div>
       </section>
-      <!-- *-----------------------------------------
-        *----------------------------------------------- FILTER--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="filter-section">
         <div class="container">
           <div class="filter-section__content">
@@ -1360,9 +1348,7 @@
           </div>
         </div>
       </section>
-       <!-- *-----------------------------------------
-        *-----------------------------------------------  TIMELINE--SECTION ------------------------------------
-         *------------------------------------------------------------------>
+
       <section class="timeline-section">
         <div class="container">
           <div class="timeline-section__content">
@@ -1471,9 +1457,6 @@
         </div>
       </section>
       
-      <!-- *-----------------------------------------
-        *-----------------------------------------------  POST__CARD--SECTION ------------------------------------
-         *------------------------------------------------------------------>
       <section class="post-section">
         <div class="container">
           <div class="post-section__content">
@@ -1619,12 +1602,9 @@
           </div>
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <!-- *----------------------------------------- 
-      *-----------------------------------------------  FOOTER--SECTION ------------------------------------
-   *------------------------------------------------------------------>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer__content">
           <div class="footer__nav-wrapper">
@@ -1636,13 +1616,12 @@
                     src="assets/images/logo.svg"
                     alt=""
                 /></a>
-        <div class="footer__icons-wrapper">
-  
+                <div class="footer__icons-wrapper">
                   <div class="footer__logo-text-wrapper">
                     <span class="footer__logo-text">REJOIGNEZ-NOUS</span>
                     <span class="footer__logo-text">Rejoindre Selectneuf</span>
                   </div>
-  
+
                   <div class="footer__social-icons">
                     <span class="footer__social-text">NOUS SUIVRE</span>
                     <div class="footer__icons-group">
@@ -1662,7 +1641,7 @@
                       </a>
                     </div>
                   </div>
-            </div>
+                </div>
               </div>
               <div class="footer__contacts">
                 <div class="footer__input-group">
@@ -1791,7 +1770,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
