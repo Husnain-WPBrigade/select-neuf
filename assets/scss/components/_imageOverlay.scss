@@ -3,7 +3,11 @@
   display: flex;
   overflow: hidden;
   @include mediaManager(640px) {
-    max-height: 219px;
+    max-height: 290px;
+
+    &__image {
+      object-fit: cover;
+    }
   }
 
   &--secondary .image-overlay__content {

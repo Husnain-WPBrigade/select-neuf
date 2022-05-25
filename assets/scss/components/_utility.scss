@@ -1,7 +1,7 @@
 .utility {
-  padding: 5px 15px;
+  padding: 7px 15px;
   background-color: $color-white;
-  @include mediaManager(640px) {
+  @include mediaManager(900px) {
     display: none;
   }
   &__content {

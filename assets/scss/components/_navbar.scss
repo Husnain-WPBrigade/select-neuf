@@ -1,20 +1,24 @@
 .nav {
   background-color: $color-white;
-
-  &__logo {
-    transform: translateY(3px);
-  }
-
-  &__dropdown-btn {
-    display: flex;
-    align-items: center;
-  }
+  padding: 15.5px 0;
 
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 0;
+  }
+
+  &__logo-wrapper {
+    transform: translateY(3px);
+
+    & a {
+      display: inline-block;
+    }
+
+    & img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
   }
 
   &__menu-wrapper {
@@ -34,6 +38,11 @@
     }
   }
 
+  &__dropdown-btn {
+    display: flex;
+    align-items: center;
+  }
+
   &__dropdown-icon {
     margin-left: 5px;
     display: none;
@@ -47,26 +56,25 @@
     }
   }
 
+  &__list-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__list {
     list-style: none;
     display: flex;
     align-items: center;
     text-transform: uppercase;
     font-size: 16px;
-    margin-right: 18px;
-    &-wrapper {
-      display: flex;
-      align-items: center;
-    }
+    margin-right: 10px;
 
     &-item {
       position: relative;
-      display: flex;
       cursor: pointer;
-      padding: 10px 12px;
 
       &:not(:last-child) {
-        margin-right: 35.5px;
+        margin-right: 19.5px;
       }
     }
 
@@ -74,9 +82,11 @@
       content: "";
       position: absolute;
       width: 0;
-      bottom: -27px;
+      bottom: -15px;
+      bottom: -26%;
       height: 2px;
       left: 0;
+      right: 0;
       background-color: $color-secondary;
       transition: all 0.3s;
     }
@@ -87,39 +97,51 @@
 
     &-item a {
       color: $color-primary;
+      padding: 20px;
+      display: inline-block;
     }
+  }
 
-    @include mediaManager(1150px) {
-      &-item {
-        padding: 5px 10px;
-
-        &:not(:last-child) {
-          margin-right: 20px;
-        }
+  @include mediaManager(1080px) {
+    &__list-item {
+      &:not(:last-child) {
+        margin-right: 10px;
       }
-    }
 
-    @include mediaManager(970px) {
-      &-item {
-        padding: 5px;
-
-        &:not(:last-child) {
-          margin-right: 15px;
-        }
+      & a {
+        padding: 20px 10px;
       }
     }
   }
 
-  // * ------------------------- Desktop - Breakpoints --------------------------
-  @include mediaManager(1210px) {
-    padding: 0 15px;
+  @include mediaManager(970px) {
+    &__last-item {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    &__btn {
+      padding: 10px 15px;
+    }
   }
 
   // * ------------------------- Laptop - Breakpoints --------------------------
   @include mediaManager(900px) {
-    .nav {
-      position: relative;
-      z-index: 9;
+    position: relative;
+
+    &__list {
+      margin-right: 0;
+    }
+
+    &__list-item {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      & a {
+        width: 100%;
+      }
     }
 
     &__logo {
@@ -133,15 +155,7 @@
 
   // * ------------------------- Mobile - Breakpoints --------------------------
   @include mediaManager(640px) {
-    padding: 0;
-
-    &__content {
-      padding: 12px 15px 13px 15px;
-    }
-
-    &__logo {
-      width: 35%;
-    }
+    padding: 15px 0;
   }
 }
 
@@ -163,13 +177,14 @@
     background-color: $color-secondary;
     min-width: 280px;
     position: absolute;
-    top: 65px;
+    top: 73px;
     left: 0;
     max-height: 0;
     transition: all 0.3s;
     overflow: hidden;
     color: $color-white;
     z-index: 99;
+    cursor: default;
 
     &-list {
       &:not(:last-child) {
@@ -178,20 +193,12 @@
     }
   }
 
-  &__list {
-    padding: 10px 20px;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
-  }
-
   &__item a {
     color: $color-white;
     font-size: 15px;
     transition: all 0.3s;
+    padding: 12px;
+    width: 100%;
 
     &:hover {
       color: rgba($color-white, 0.75);
@@ -203,39 +210,28 @@
   max-height: 100vh;
 }
 
-.mobile-nav {
-  display: none;
-}
-
 @include mediaManager(900px) {
-  .mobile-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px;
-    background-color: $color-white;
-  }
-
   .nav__dropdown-icon {
     margin-left: 5px;
     display: flex;
   }
 
-  .mobile-nav .nav__icons-group {
-    margin-right: 0px;
-  }
-
   .nav {
     &__list-wrapper {
       position: absolute;
-      right: -999px;
-      overflow: hidden;
-      width: 0;
-      height: 0;
+      right: 0;
+      top: 100%;
+      bottom: 0;
+      overflow: auto;
+      width: 100%;
+      height: 0vh;
       opacity: 0;
+      -webkit-transition: all 0.5s;
       transition: all 0.5s;
-      background-color: $color-white;
+      background-color: #fff;
+      flex-direction: column;
+      z-index: 29;
+      border: 1px solid red;
     }
 
     &__list-item::after {
@@ -262,7 +258,6 @@
       &-item {
         margin: 0;
         padding: 0;
-        margin-bottom: 30px;
         width: 100%;
       }
     }
@@ -275,18 +270,10 @@
     }
   }
   .nav-active .nav__list-wrapper {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    overflow: auto;
+    height: 100vh;
     opacity: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    z-index: 29;
+    border: 1px solid red;
   }
 
   .dropdown:hover .dropdown__content {

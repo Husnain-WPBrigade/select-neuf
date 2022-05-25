@@ -46,16 +46,14 @@ hamburger.forEach((hambItem) => {
 menuIcon.forEach((icon) => {
   icon.addEventListener("click", function () {
     navbar.classList.toggle("nav-active");
+
+    if (navbar.classList.contains("nav-active")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   });
 });
-
-mobileMenu.addEventListener("click", () => {
-  desktopMenu.classList.remove("menu--active");
-});
-
-// desktopMenu.addEventListener("click", () => {
-//   mobileMenu.classList.toggle("menu--active");
-// });
 
 dropdown.forEach((dropdownItem) => {
   dropdownItem.addEventListener("click", function () {
@@ -84,9 +82,9 @@ if (formClose) {
 
 // ---------------------------------- Card - Slider
 var swiper = new Swiper(".portfolio-slider__wrapper", {
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 30,
-  slidesPerGroup: 4,
+  slidesPerGroup: 1,
   breakpoints: {
     100: {
       slidesPerView: 1,
@@ -95,12 +93,13 @@ var swiper = new Swiper(".portfolio-slider__wrapper", {
 
     640: {
       slidesPerView: 2,
+      slidesPerGroup: 1,
       spaceBetween: 30,
     },
 
     980: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerGroup: 1,
     },
   },
   loop: true,
@@ -123,16 +122,19 @@ var swiper = new Swiper(".feature-slider__wrapper", {
   breakpoints: {
     100: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       spaceBetween: 20,
     },
 
     640: {
       slidesPerView: 2,
+      slidesPerGroup: 1,
       spaceBetween: 30,
     },
 
     980: {
       slidesPerView: 4,
+      slidesPerGroup: 1,
     },
   },
   loop: true,

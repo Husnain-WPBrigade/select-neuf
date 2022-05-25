@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Neuf | Home Page</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +18,6 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Select Neuf | Home Page</title>
   </head>
 
   <body>
@@ -48,28 +49,32 @@
           <div class="utility__content">
             <div class="utility__media-group">
               <div class="media-inline">
-                <div class="media-inline__image">
-                  <img
-                    class="nav__icon"
-                    src="assets/images/star-icon-grey.svg"
-                    alt=""
-                  />
-                </div>
-                <div class="media-inline__content">
-                  <p class="media-inline__text utility__text">Sélection</p>
-                </div>
+                <a href="" class="media-inline__wrapper">
+                  <div class="media-inline__image">
+                    <img
+                      class="nav__icon"
+                      src="assets/images/star-icon-grey.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="media-inline__content">
+                    <p class="media-inline__text utility__text">Sélection</p>
+                  </div>
+                </a>
               </div>
               <div class="media-inline">
-                <div class="media-inline__image">
-                  <img
-                    class="nav__icon"
-                    src="assets/images/lock_icon.svg"
-                    alt=""
-                  />
-                </div>
-                <div class="media-inline__content">
-                  <p class="media-inline__text utility__text">Connexion</p>
-                </div>
+                <a href="" class="media-inline__wrapper">
+                  <div class="media-inline__image">
+                    <img
+                      class="nav__icon"
+                      src="assets/images/lock_icon.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="media-inline__content">
+                    <p class="media-inline__text utility__text">Connexion</p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -80,9 +85,11 @@
       <nav class="nav">
         <div class="container">
           <div class="nav__content">
-            <a href="index.html" class="nav__logo"
-              ><img src="assets/images/logo.svg" alt=""
-            /></a>
+            <div class="nav__logo-wrapper">
+              <a href="index.html" class="nav__logo"
+                ><img src="assets/images/logo.svg" alt=""
+              /></a>
+            </div>
             <div class="nav__menu-wrapper">
               <div class="nav__icons-group">
                 <img
@@ -96,42 +103,17 @@
                   alt=""
                 />
               </div>
-              <div class="nav__menu menu desktop-menu">
+              <div class="nav__menu menu">
                 <div class="menu__item"></div>
                 <div class="menu__item"></div>
                 <div class="menu__item"></div>
               </div>
             </div>
             <div class="nav__list-wrapper">
-              <div class="mobile-nav">
-                <div class="nav__menu menu menu--active mobile-menu">
-                  <div class="menu__item"></div>
-                  <div class="menu__item"></div>
-                  <div class="menu__item"></div>
-                </div>
-                <a href="#" class="nav__logo"
-                  ><img src="assets/images/logo.svg" alt=""
-                /></a>
-
-                <div class="nav__menu-wrapper">
-                  <div class="nav__icons-group">
-                    <img
-                      class="nav__icon"
-                      src="assets/images/star-icon-grey.svg"
-                      alt=""
-                    />
-                    <img
-                      class="nav__icon"
-                      src="assets/images/lock_icon.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
               <ul class="nav__list">
                 <li class="nav__list-item dropdown">
                   <div class="nav__dropdown-btn">
-                    <a href="index.html">ACHETER</a>
+                    <a >ACHETER</a>
                     <img
                       class="nav__dropdown-icon icon"
                       src="assets/images/dropdown_icon.svg"
@@ -175,7 +157,7 @@
                 <li class="nav__list-item"><a href="#">SIMULER</a></li>
                 <li class="nav__list-item"><a href="contact.html">CONTACT</a></li>
               </ul>
-              <a href="#" class="btn btn--primary nav__btn">NOUS REJOINDRE</a>
+              <div class="nav__btn-wrapper"><a href="#" class="btn btn--primary nav__btn">NOUS REJOINDRE</a></div>
             </div>
           </div>
         </div>

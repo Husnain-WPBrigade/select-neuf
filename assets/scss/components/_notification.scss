@@ -2,7 +2,7 @@
   background-color: $color-primary;
   color: $color-white;
   position: relative;
-  padding: 22px 15px;
+  padding: 19px 15px;
   @include mediaManager(640px) {
     display: none;
   }
@@ -17,6 +17,7 @@
   &__text {
     font-size: 14px;
     text-align: center;
+    line-height: 1.5;
   }
 
   &__icon {

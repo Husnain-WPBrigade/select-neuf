@@ -156,7 +156,7 @@
   }
 
   @include mediaManager(640px) {
-    padding: 20px 15px;
+    padding: 20px 0px;
 
     &__content {
       padding: 0;

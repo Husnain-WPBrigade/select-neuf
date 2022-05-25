@@ -19,7 +19,6 @@
   // --------------------  Breakpoints -----------------------
   @include mediaManager(1260px) {
     &__content {
-      width: 90%;
       margin: 0 auto;
     }
   }

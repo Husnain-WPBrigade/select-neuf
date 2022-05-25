@@ -7,6 +7,10 @@
     padding: 58px 15px 20px 15px;
   }
 
+  @include mediaManager(640px) {
+    padding: 58px 0 20px 0;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
